@@ -22,9 +22,30 @@ When I begin designing a system, I do not start by identifying services, databas
 
 Each capability represents a stable responsibility within the system. Together, they form an architectural model that transforms business intent into reliable operational behavior while preserving clear ownership at every stage.
 
-<p align="center">
-  <img src="./03 - Reference Architecture Dependency Map.svg" width="100%" alt="Reference Architecture Dependency Map">
-</p>
+```text
+Business Intent
+        │
+        ▼
+Business Configuration
+        │
+        ▼
+Configuration Management
+        │
+        ▼
+Business Decision Framework
+        │
+        ▼
+Request Lifecycle
+        │
+        ▼
+Workflow Orchestration
+        │
+        ▼
+External Execution
+        │
+        ▼
+Operational Visibility
+```
 
 Although these capabilities are presented sequentially, they should not be interpreted as a rigid processing pipeline. They represent architectural responsibilities that collaborate through explicit contracts while remaining independently owned.
 
