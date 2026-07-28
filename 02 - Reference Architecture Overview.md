@@ -1,5 +1,3 @@
-# Reference Architecture Overview
-
 ## Purpose
 
 Every architecture is a reflection of the principles that created it.
