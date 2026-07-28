@@ -1,4 +1,4 @@
-<svg id="my-svg" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 1700" style="background-color: #fafafa;" role="graphics-document document" aria-label="Reference Architecture Dependency Map">
+<svg id="my-svg" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 1750" style="background-color: #fafafa;" role="graphics-document document" aria-label="Reference Architecture Dependency Map">
   <defs>
     <filter id="softShadow" x="-5%" y="-3%" width="110%" height="106%">
       <feDropShadow dx="3" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
@@ -58,7 +58,7 @@
   <text x="100" y="55" class="title-main">Reference Architecture Dependency Map</text>
   <text x="100" y="85" class="title-sub">Vertical capability stack with dependency semantics and cross-cutting observability</text>
 
-  <!-- ================= NODES LAYER (drawn first, connectors will overlay) ================= -->
+  <!-- ================= NODES LAYER ================= -->
 
   <!-- Foundation Group -->
   <rect x="100" y="110" width="1000" height="300" class="group-bg"/>
@@ -84,26 +84,26 @@
     <text x="185" y="565" class="node-dec-title">003 Business Decision Framework</text>
   </g>
 
-  <!-- Workflow Group -->
-  <rect x="100" y="635" width="760" height="320" class="group-bg"/>
+  <!-- Workflow Group (55% of shared width ≈ 650px) -->
+  <rect x="100" y="635" width="660" height="320" class="group-bg"/>
   <text x="130" y="670" class="section-label">03 — Workflow Layer</text>
 
   <g id="node-004">
-    <rect x="150" y="705" width="660" height="90" class="node-wrk"/>
+    <rect x="150" y="705" width="560" height="90" class="node-wrk"/>
     <text x="185" y="755" class="node-wrk-title">004 Customer Intake Request Model</text>
   </g>
 
   <g id="node-005">
-    <rect x="150" y="840" width="660" height="90" class="node-wrk"/>
+    <rect x="150" y="840" width="560" height="90" class="node-wrk"/>
     <text x="185" y="890" class="node-wrk-title">005 Emergency Client-Contact Workflow</text>
   </g>
 
-  <!-- Communication Node (sidecar, aligned with 005) -->
+  <!-- Communication Node (45% of shared width ≈ 440px) -->
   <g id="node-006">
-    <rect x="930" y="820" width="240" height="130" class="node-com"/>
-    <text x="1050" y="855" class="node-com-title" text-anchor="middle">006 Client</text>
-    <text x="1050" y="885" class="node-com-title" text-anchor="middle">Notification</text>
-    <text x="1050" y="915" class="node-com-title" text-anchor="middle">Framework</text>
+    <rect x="820" y="710" width="280" height="170" class="node-com"/>
+    <text x="960" y="765" class="node-com-title" text-anchor="middle">006 Client</text>
+    <text x="960" y="800" class="node-com-title" text-anchor="middle">Notification</text>
+    <text x="960" y="835" class="node-com-title" text-anchor="middle">Framework</text>
   </g>
 
   <!-- Cross-Cutting Visibility -->
@@ -118,7 +118,7 @@
 
   <!-- Legend -->
   <g id="legend">
-    <rect x="100" y="1200" width="1000" height="220" class="legend-box"/>
+    <rect x="100" y="1200" width="1000" height="270" class="legend-box"/>
     <text x="130" y="1245" class="legend-title">Dependency Legend</text>
 
     <line x1="130" y1="1290" x2="230" y2="1290" class="halo"/>
@@ -140,47 +140,55 @@
 
   <!-- ================= CONNECTORS LAYER (drawn last, overlaying nodes) ================= -->
 
-  <!-- 001 -> 002 (uses, red) -->
-  <path d="M 600,275 C 600,288 600,292 600,305" class="halo"/>
-  <path d="M 600,275 C 600,288 600,292 600,305" class="conn-uses" marker-end="url(#arrowRed)"/>
+  <!-- Corrected arrow directions per Mermaid source -->
 
-  <!-- 002 -> 003 (consumes, blue) -->
-  <path d="M 600,395 C 600,430 600,460 600,510" class="halo"/>
-  <path d="M 600,395 C 600,430 600,460 600,510" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+  <!-- 002 uses 001 (red): points from 002 UP to 001 -->
+  <path d="M 600,305 C 600,292 600,288 600,275" class="halo"/>
+  <path d="M 600,305 C 600,292 600,288 600,275" class="conn-uses" marker-end="url(#arrowRed)"/>
 
-  <!-- 003 -> 004 (uses, red) -->
-  <path d="M 600,605 C 600,630 600,650 600,700" class="halo"/>
-  <path d="M 600,605 C 600,630 600,650 600,700" class="conn-uses" marker-end="url(#arrowRed)"/>
+  <!-- 003 consumes 002 (blue): points from 003 UP to 002 -->
+  <path d="M 600,510 C 600,460 600,430 600,395" class="halo"/>
+  <path d="M 600,510 C 600,460 600,430 600,395" class="conn-consumes" marker-end="url(#arrowBlue)"/>
 
-  <!-- 004 -> 005 (builds upon, green) -->
-  <path d="M 600,795 C 600,805 600,815 600,840" class="halo"/>
-  <path d="M 600,795 C 600,805 600,815 600,840" class="conn-builds" marker-end="url(#arrowGreen)"/>
+  <!-- 004 uses 003 (red): points from 004 UP to 003 -->
+  <path d="M 600,700 C 600,650 600,630 600,605" class="halo"/>
+  <path d="M 600,700 C 600,650 600,630 600,605" class="conn-uses" marker-end="url(#arrowRed)"/>
 
-  <!-- 004 -> 006 (consumes, blue) routed far right -->
-  <path d="M 810,750 C 870,750 900,800 930,820" class="halo"/>
-  <path d="M 810,750 C 870,750 900,800 930,820" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+  <!-- 005 builds upon 004 (green): points from 005 UP to 004 -->
+  <path d="M 600,840 C 600,815 600,805 600,795" class="halo"/>
+  <path d="M 600,840 C 600,815 600,805 600,795" class="conn-builds" marker-end="url(#arrowGreen)"/>
 
-  <!-- 005 -> 006 (consumes, blue) routed far right -->
-  <path d="M 810,885 C 870,885 900,885 930,885" class="halo"/>
-  <path d="M 810,885 C 870,885 900,885 930,885" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+  <!-- 006 consumes 004 (blue): points from 006 LEFT to 004 -->
+  <path d="M 820,765 C 780,765 750,750 710,750" class="halo"/>
+  <path d="M 820,765 C 780,765 750,750 710,750" class="conn-consumes" marker-end="url(#arrowBlue)"/>
 
-  <!-- Telemetry fan to 007 -->
-  <path d="M 320,275 C 320,500 320,700 320,1055" class="halo"/>
-  <path d="M 320,275 C 320,500 320,700 320,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <!-- 006 consumes 005 (blue): points from 006 LEFT to 005 -->
+  <path d="M 820,835 C 780,835 750,885 710,885" class="halo"/>
+  <path d="M 820,835 C 780,835 750,885 710,885" class="conn-consumes" marker-end="url(#arrowBlue)"/>
 
-  <path d="M 600,395 C 580,500 580,700 580,1055" class="halo"/>
-  <path d="M 600,395 C 580,500 580,700 580,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <!-- Telemetry fan to 007 (amber dashed) -->
+  <!-- 001: route around left outside -->
+  <path d="M 150,220 C 60,220 60,700 120,1055" class="halo"/>
+  <path d="M 150,220 C 60,220 60,700 120,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
 
-  <path d="M 880,515 C 840,650 840,800 820,1055" class="halo"/>
-  <path d="M 880,515 C 840,650 840,800 820,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <!-- 002: route around left outside -->
+  <path d="M 150,350 C 80,350 80,750 160,1055" class="halo"/>
+  <path d="M 150,350 C 80,350 80,750 160,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
 
-  <path d="M 810,750 C 820,800 820,900 860,1055" class="halo"/>
-  <path d="M 810,750 C 820,800 820,900 860,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <!-- 003 -->
+  <path d="M 600,605 C 600,700 600,900 600,1055" class="halo"/>
+  <path d="M 600,605 C 600,700 600,900 600,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
 
-  <path d="M 810,885 C 860,900 860,950 900,1055" class="halo"/>
-  <path d="M 810,885 C 860,900 860,950 900,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <!-- 004 -->
+  <path d="M 430,750 C 430,850 430,950 450,1055" class="halo"/>
+  <path d="M 430,750 C 430,850 430,950 450,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
 
-  <path d="M 1050,855 C 1050,950 1050,1000 1020,1055" class="halo"/>
-  <path d="M 1050,855 C 1050,950 1050,1000 1020,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <!-- 005 -->
+  <path d="M 430,885 C 430,950 430,1000 500,1055" class="halo"/>
+  <path d="M 430,885 C 430,950 430,1000 500,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
+
+  <!-- 006: from bottom of node, route right then down to 007 -->
+  <path d="M 960,880 C 960,980 960,1020 1080,1055" class="halo"/>
+  <path d="M 960,880 C 960,980 960,1020 1080,1055" class="conn-emits" marker-end="url(#arrowAmber)"/>
 
 </svg>
