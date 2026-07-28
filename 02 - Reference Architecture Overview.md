@@ -20,11 +20,7 @@ When I begin designing a system, I do not start by identifying services, databas
 
 Each capability represents a stable responsibility within the system. Together, they form an architectural model that transforms business intent into reliable operational behavior while preserving clear ownership at every stage.
 
-<p align="center">
-  <a href="https://raw.githubusercontent.com/BelSarAi/ArchitecturAlchemized/main/03%20-%20Reference%20Architecture%20Dependency%20Map.svg" target="_blank" rel="noopener noreferrer">
-    <img src="https://raw.githubusercontent.com/BelSarAi/ArchitecturAlchemized/main/03%20-%20Reference%20Architecture%20Dependency%20Map.svg" width="100%" alt="Reference Architecture Dependency Map">
-  </a>
-</p>
+[View Reference Architecture Dependency Map](https://github.com/BelSarAi/ArchitecturAlchemized/blob/main/03%20-%20Reference%20Architecture%20Dependency%20Map.svg)
 
 Although these capabilities are presented sequentially, they should not be interpreted as a rigid processing pipeline. They represent architectural responsibilities that collaborate through explicit contracts while remaining independently owned.
 
