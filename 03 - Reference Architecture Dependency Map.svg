@@ -1,1 +1,174 @@
+<svg id="my-svg" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1500 1050" style="background-color: #fafafa;" role="graphics-document document" aria-label="Reference Architecture Dependency Map">
+  <defs>
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="6" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
 
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    </marker>
+
+    <marker id="dashArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <style>
+    .title-main { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 36px; font-weight: 800; fill: #0f172a; }
+    .title-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; fill: #64748b; }
+    .section-label { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 20px; font-weight: 700; fill: #475569; text-transform: uppercase; letter-spacing: 1px; }
+    .group-bg { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 2px; stroke-dasharray: 5 5; rx: 18px; ry: 18px; }
+
+    .node-fnd { fill: #f0fdf4; stroke: #155724; stroke-width: 3px; rx: 14px; filter: url(#softShadow); }
+    .node-fnd-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 25px; font-weight: 800; fill: #14532d; }
+    .node-fnd-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; fill: #166534; }
+
+    .node-dec { fill: #eef2ff; stroke: #383d7a; stroke-width: 3px; rx: 14px; filter: url(#softShadow); }
+    .node-dec-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 25px; font-weight: 800; fill: #1e1b4b; }
+    .node-dec-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; fill: #3730a3; }
+
+    .node-wrk { fill: #ecfeff; stroke: #0c5460; stroke-width: 3px; rx: 14px; filter: url(#softShadow); }
+    .node-wrk-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 25px; font-weight: 800; fill: #083344; }
+    .node-wrk-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; fill: #155e75; }
+
+    .node-com { fill: #fff1f2; stroke: #721c24; stroke-width: 3px; rx: 14px; filter: url(#softShadow); }
+    .node-com-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 25px; font-weight: 800; fill: #4c0519; }
+    .node-com-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; fill: #9f1239; }
+
+    .node-vis { fill: #fffbeb; stroke: #856404; stroke-width: 3px; rx: 14px; filter: url(#softShadow); }
+    .node-vis-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 25px; font-weight: 800; fill: #451a03; }
+    .node-vis-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; fill: #92400e; }
+
+    .conn-solid { fill: none; stroke: #334155; stroke-width: 3.5px; stroke-linecap: round; }
+    .conn-dash { fill: none; stroke: #64748b; stroke-width: 2.5px; stroke-dasharray: 8 6; stroke-linecap: round; }
+    .lbl-bg { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5px; rx: 6px; }
+    .lbl-text { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 16px; font-weight: 700; fill: #1e293b; }
+  </style>
+
+  <!-- Title -->
+  <text x="60" y="60" class="title-main">Reference Architecture Dependency Map</text>
+  <text x="60" y="92" class="title-sub">Specification-First Architecture Capabilities, Dependencies &amp; Cross-Cutting Observability</text>
+
+  <!-- === LAYER 01: FOUNDATION === -->
+  <g id="layer-foundation">
+    <rect x="50" y="130" width="1400" height="200" class="group-bg"/>
+    <text x="80" y="168" class="section-label">01 — Configuration Foundation</text>
+
+    <g id="node-001">
+      <rect x="80" y="195" width="570" height="110" class="node-fnd"/>
+      <text x="110" y="242" class="node-fnd-title">001 Business Configuration Framework</text>
+      <text x="110" y="275" class="node-fnd-sub">Defines business intent, structure, policies, and base schemas</text>
+    </g>
+
+    <g id="node-002">
+      <rect x="850" y="195" width="570" height="110" class="node-fnd"/>
+      <text x="880" y="242" class="node-fnd-title">002 Configuration Management Layer</text>
+      <text x="880" y="275" class="node-fnd-sub">Validates, resolves, and exposes runtime configuration context</text>
+    </g>
+  </g>
+
+  <!-- === LAYER 02: DECISION === -->
+  <g id="layer-decision">
+    <rect x="50" y="370" width="1400" height="190" class="group-bg"/>
+    <text x="80" y="408" class="section-label">02 — Business Decision Framework</text>
+
+    <g id="node-003">
+      <rect x="425" y="440" width="650" height="105" class="node-dec"/>
+      <text x="455" y="487" class="node-dec-title">003 Business Decision Framework</text>
+      <text x="455" y="520" class="node-dec-sub">Applies verified policies to determine what the system should do</text>
+    </g>
+  </g>
+
+  <!-- === LAYER 03: WORKFLOW === -->
+  <g id="layer-workflow">
+    <rect x="50" y="600" width="1400" height="210" class="group-bg"/>
+    <text x="80" y="638" class="section-label">03 — Request Lifecycle &amp; Workflow Orchestration</text>
+
+    <g id="node-004">
+      <rect x="80" y="675" width="570" height="110" class="node-wrk"/>
+      <text x="110" y="722" class="node-wrk-title">004 Customer Intake Request Model</text>
+      <text x="110" y="755" class="node-wrk-sub">Models the request state, transitions, and lifecycle boundaries</text>
+    </g>
+
+    <g id="node-005">
+      <rect x="850" y="675" width="570" height="110" class="node-wrk"/>
+      <text x="880" y="722" class="node-wrk-title">005 Emergency Client-Contact Workflow</text>
+      <text x="880" y="755" class="node-wrk-sub">Orchestrates sequencing, escalation, and contact execution</text>
+    </g>
+  </g>
+
+  <!-- === LAYER 04: EXECUTION === -->
+  <g id="layer-execution">
+    <rect x="50" y="850" width="670" height="170" class="group-bg"/>
+    <text x="80" y="888" class="section-label">04 — External Execution</text>
+
+    <g id="node-006">
+      <rect x="80" y="905" width="610" height="100" class="node-com"/>
+      <text x="110" y="945" class="node-com-title">006 Client Notification Framework</text>
+      <text x="110" y="975" class="node-com-sub">Dispatches messages via SMS, email, and external channels</text>
+    </g>
+  </g>
+
+  <!-- === LAYER 05: CROSS-CUTTING VISIBILITY === -->
+  <g id="layer-visibility">
+    <rect x="780" y="850" width="670" height="170" class="group-bg"/>
+    <text x="810" y="888" class="section-label">05 — Operational Visibility</text>
+
+    <g id="node-007">
+      <rect x="810" y="905" width="610" height="100" class="node-vis"/>
+      <text x="840" y="945" class="node-vis-title">007 Operational Visibility Framework</text>
+      <text x="840" y="975" class="node-vis-sub">Records events, traces, and audit evidence across all layers</text>
+    </g>
+  </g>
+
+  <!-- === SOLID DEPENDENCY CONNECTIONS === -->
+
+  <!-- 002 uses 001 -->
+  <path d="M 850,250 L 660,250" class="conn-solid" marker-end="url(#arrow)"/>
+  <rect x="705" y="236" width="90" height="28" class="lbl-bg"/>
+  <text x="750" y="256" text-anchor="middle" class="lbl-text">uses</text>
+
+  <!-- 003 consumes 002 -->
+  <path d="M 750,345 L 750,440" class="conn-solid" marker-end="url(#arrow)"/>
+  <rect x="700" y="380" width="120" height="28" class="lbl-bg"/>
+  <text x="760" y="400" text-anchor="middle" class="lbl-text">consumes</text>
+
+  <!-- 004 uses 003 -->
+  <path d="M 365,600 L 365,565 C 365,525 600,525 650,492" class="conn-solid" marker-end="url(#arrow)"/>
+  <rect x="400" y="525" width="60" height="28" class="lbl-bg"/>
+  <text x="430" y="545" text-anchor="middle" class="lbl-text">uses</text>
+
+  <!-- 005 builds upon 004 -->
+  <path d="M 850,730 L 660,730" class="conn-solid" marker-end="url(#arrow)"/>
+  <rect x="705" y="716" width="130" height="28" class="lbl-bg"/>
+  <text x="770" y="736" text-anchor="middle" class="lbl-text">builds upon</text>
+
+  <!-- 006 consumes 004 -->
+  <path d="M 365,785 L 365,850" class="conn-solid" marker-end="url(#arrow)"/>
+  <rect x="315" y="808" width="100" height="28" class="lbl-bg"/>
+  <text x="365" y="828" text-anchor="middle" class="lbl-text">consumes</text>
+
+  <!-- 006 consumes 005 -->
+  <path d="M 850,785 C 850,820 700,820 690,905" class="conn-solid" marker-end="url(#arrow)"/>
+  <rect x="685" y="808" width="100" height="28" class="lbl-bg"/>
+  <text x="735" y="828" text-anchor="middle" class="lbl-text">consumes</text>
+
+  <!-- === DASHED TELEMETRY LINES TO 007 === -->
+
+  <!-- Foundation to visibility -->
+  <path d="M 1420,250 C 1460,250 1460,580 1190,905" class="conn-dash" marker-end="url(#dashArrow)"/>
+
+  <!-- Decision to visibility -->
+  <path d="M 750,545 L 750,600 C 750,700 1065,700 1065,905" class="conn-dash" marker-end="url(#dashArrow)"/>
+
+  <!-- Workflow to visibility -->
+  <path d="M 1135,730 C 1135,800 1085,800 1085,905" class="conn-dash" marker-end="url(#dashArrow)"/>
+
+  <!-- Execution to visibility -->
+  <path d="M 690,955 L 810,955" class="conn-dash" marker-end="url(#dashArrow)"/>
+
+  <!-- Telemetry label -->
+  <rect x="1040" y="820" width="140" height="28" class="lbl-bg"/>
+  <text x="1110" y="840" text-anchor="middle" class="lbl-text">emits events to</text>
+
+</svg>
