@@ -1,21 +1,26 @@
-<svg id="my-svg" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 2400 900" style="background-color: #fafafa;" role="graphics-document document" aria-label="Reference Architecture Dependency Map">
+<svg id="my-svg" xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1012 1850" style="background-color: #fafafa;" role="graphics-document document" aria-label="Reference Architecture Dependency Map">
   <defs>
-    <filter id="softShadow" x="-3%" y="-5%" width="106%" height="110%">
-      <feDropShadow dx="4" dy="6" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.10"/>
+    <filter id="softShadow" x="-5%" y="-3%" width="110%" height="106%">
+      <feDropShadow dx="3" dy="5" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.12"/>
     </filter>
 
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 1 L 10 5 L 0 9 z" fill="#334155"/>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626"/>
     </marker>
-
-    <marker id="dashArrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#64748b"/>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a"/>
+    </marker>
+    <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 9 5 L 0 8.5 z" fill="#d97706"/>
     </marker>
   </defs>
 
   <style>
-    .title-main { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 40px; font-weight: 800; fill: #0f172a; }
-    .title-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 20px; fill: #64748b; }
+    .title-main { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 38px; font-weight: 800; fill: #0f172a; }
+    .title-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 18px; fill: #64748b; }
     .section-label { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 22px; font-weight: 700; fill: #475569; text-transform: uppercase; letter-spacing: 1px; }
     .group-bg { fill: #f1f5f9; stroke: #cbd5e1; stroke-width: 2.5px; stroke-dasharray: 6 5; rx: 20px; ry: 20px; }
 
@@ -39,137 +44,141 @@
     .node-vis-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 28px; font-weight: 800; fill: #451a03; }
     .node-vis-sub { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 18px; fill: #92400e; }
 
-    .conn-solid { fill: none; stroke: #334155; stroke-width: 4px; stroke-linecap: round; }
-    .conn-dash { fill: none; stroke: #64748b; stroke-width: 3px; stroke-dasharray: 10 7; stroke-linecap: round; }
+    .conn-uses { fill: none; stroke: #dc2626; stroke-width: 4px; stroke-linecap: round; }
+    .conn-consumes { fill: none; stroke: #2563eb; stroke-width: 4px; stroke-linecap: round; }
+    .conn-builds { fill: none; stroke: #16a34a; stroke-width: 4px; stroke-linecap: round; }
+    .conn-emits { fill: none; stroke: #d97706; stroke-width: 3px; stroke-dasharray: 10 7; stroke-linecap: round; }
+
     .lbl-bg { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2px; rx: 8px; }
-    .lbl-text { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 18px; font-weight: 700; fill: #1e293b; }
+    .lbl-text { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 17px; font-weight: 700; fill: #1e293b; }
+
+    .legend-box { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2px; rx: 14px; filter: url(#softShadow); }
+    .legend-title { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 24px; font-weight: 800; fill: #0f172a; }
+    .legend-text { font-family: "trebuchet ms", verdana, arial, sans-serif; font-size: 18px; fill: #334155; }
   </style>
 
   <!-- Title -->
-  <text x="80" y="70" class="title-main">Reference Architecture Dependency Map</text>
-  <text x="80" y="108" class="title-sub">Specification-First Architecture Capabilities, Dependencies &amp; Cross-Cutting Observability</text>
+  <text x="80" y="60" class="title-main">Reference Architecture Dependency Map</text>
+  <text x="80" y="95" class="title-sub">Vertical capability stack with dependency semantics and cross-cutting observability</text>
+
+  <!-- ================= ARROWS LAYER (drawn first, so they appear behind nodes) ================= -->
+
+  <!-- 002 uses 001 (red) -->
+  <path d="M 330,425 L 330,360" class="conn-uses" marker-end="url(#arrowRed)"/>
+
+  <!-- 003 consumes 002 (blue) -->
+  <path d="M 506,560 L 506,490" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+
+  <!-- 004 uses 003 (red) -->
+  <path d="M 506,700 L 506,630" class="conn-uses" marker-end="url(#arrowRed)"/>
+
+  <!-- 005 builds upon 004 (green) -->
+  <path d="M 506,900 L 506,830" class="conn-builds" marker-end="url(#arrowGreen)"/>
+
+  <!-- 006 consumes 004 (blue, from 004 right side to 006 top) -->
+  <path d="M 682,765 C 760,765 760,970 682,970" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+
+  <!-- 006 consumes 005 (blue, from 005 right side to 006 bottom/left) -->
+  <path d="M 682,865 C 760,865 760,1045 682,1045" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+
+  <!-- Emits events to 007 (amber dashed) -->
+  <path d="M 250,390 C 120,390 120,1205 330,1205" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <path d="M 682,390 C 820,390 820,1205 682,1205" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <path d="M 506,560 C 880,560 880,1205 682,1205" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <path d="M 250,765 C 160,765 160,1205 330,1205" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <path d="M 250,865 C 180,865 180,1205 330,1205" class="conn-emits" marker-end="url(#arrowAmber)"/>
+  <path d="M 682,1045 C 760,1045 760,1205 682,1205" class="conn-emits" marker-end="url(#arrowAmber)"/>
+
+  <!-- ================= NODES LAYER (drawn on top of arrows) ================= -->
 
   <!-- === FOUNDATION GROUP === -->
-  <g id="group-foundation">
-    <rect x="80" y="180" width="560" height="260" class="group-bg"/>
-    <text x="110" y="220" class="section-label">Configuration Foundation</text>
+  <g id="layer-foundation">
+    <rect x="80" y="140" width="852" height="320" class="group-bg"/>
+    <text x="110" y="180" class="section-label">01 — Configuration Foundation</text>
 
     <g id="node-001">
-      <rect x="110" y="245" width="500" height="75" class="node-fnd"/>
-      <text x="140" y="285" class="node-fnd-title">001 Business Configuration Framework</text>
-      <text x="140" y="308" class="node-fnd-sub">Defines business intent, policies, and base schemas</text>
+      <rect x="110" y="210" width="792" height="110" class="node-fnd"/>
+      <text x="145" y="260" class="node-fnd-title">001 Business Configuration Framework</text>
+      <text x="145" y="295" class="node-fnd-sub">Defines business intent, policies, and base schemas</text>
     </g>
 
     <g id="node-002">
-      <rect x="110" y="340" width="500" height="75" class="node-fnd"/>
-      <text x="140" y="380" class="node-fnd-title">002 Configuration Management Layer</text>
-      <text x="140" y="403" class="node-fnd-sub">Validates and resolves runtime configuration context</text>
+      <rect x="110" y="360" width="792" height="70" class="node-fnd"/>
+      <text x="145" y="403" class="node-fnd-title">002 Configuration Management Layer</text>
     </g>
   </g>
 
-  <!-- === DECISION GROUP === -->
-  <g id="group-decision">
-    <rect x="720" y="180" width="360" height="260" class="group-bg"/>
-    <text x="750" y="220" class="section-label">Decision Layer</text>
+  <!-- === DECISION LAYER === -->
+  <g id="layer-decision">
+    <rect x="80" y="490" width="852" height="160" class="group-bg"/>
+    <text x="110" y="530" class="section-label">02 — Decision Layer</text>
 
     <g id="node-003">
-      <rect x="750" y="280" width="300" height="85" class="node-dec"/>
-      <text x="780" y="320" class="node-dec-title">003 Business Decision</text>
-      <text x="780" y="343" class="node-dec-title">Framework</text>
+      <rect x="110" y="560" width="792" height="70" class="node-dec"/>
+      <text x="145" y="603" class="node-dec-title">003 Business Decision Framework</text>
     </g>
   </g>
 
-  <!-- === WORKFLOW GROUP === -->
-  <g id="group-workflow">
-    <rect x="1160" y="180" width="560" height="260" class="group-bg"/>
-    <text x="1190" y="220" class="section-label">Workflow Layer</text>
+  <!-- === WORKFLOW LAYER === -->
+  <g id="layer-workflow">
+    <rect x="80" y="680" width="852" height="230" class="group-bg"/>
+    <text x="110" y="720" class="section-label">03 — Workflow Layer</text>
 
     <g id="node-004">
-      <rect x="1190" y="245" width="500" height="75" class="node-wrk"/>
-      <text x="1220" y="285" class="node-wrk-title">004 Customer Intake Request Model</text>
-      <text x="1220" y="308" class="node-wrk-sub">Models request state, transitions, and lifecycle</text>
+      <rect x="110" y="750" width="792" height="80" class="node-wrk"/>
+      <text x="145" y="795" class="node-wrk-title">004 Customer Intake Request Model</text>
     </g>
 
     <g id="node-005">
-      <rect x="1190" y="340" width="500" height="75" class="node-wrk"/>
-      <text x="1220" y="380" class="node-wrk-title">005 Emergency Client-Contact Workflow</text>
-      <text x="1220" y="403" class="node-wrk-sub">Orchestrates sequencing, escalation, and execution</text>
+      <rect x="110" y="865" width="792" height="80" class="node-wrk"/>
+      <text x="145" y="910" class="node-wrk-title">005 Emergency Client-Contact Workflow</text>
     </g>
   </g>
 
-  <!-- === COMMUNICATION GROUP === -->
-  <g id="group-communication">
-    <rect x="1800" y="180" width="520" height="260" class="group-bg"/>
-    <text x="1830" y="220" class="section-label">Communication Layer</text>
+  <!-- === COMMUNICATION LAYER === -->
+  <g id="layer-communication">
+    <rect x="80" y="940" width="852" height="160" class="group-bg"/>
+    <text x="110" y="980" class="section-label">04 — Communication Layer</text>
 
     <g id="node-006">
-      <rect x="1830" y="280" width="460" height="85" class="node-com"/>
-      <text x="1860" y="320" class="node-com-title">006 Client Notification</text>
-      <text x="1860" y="343" class="node-com-title">Framework</text>
+      <rect x="110" y="1010" width="792" height="70" class="node-com"/>
+      <text x="145" y="1053" class="node-com-title">006 Client Notification Framework</text>
     </g>
   </g>
 
-  <!-- === OPERATIONAL VISIBILITY === -->
-  <g id="node-007">
-    <rect x="900" y="640" width="600" height="130" class="node-vis"/>
-    <text x="930" y="690" class="node-vis-title">007 Operational Visibility Framework</text>
-    <text x="930" y="725" class="node-vis-sub">Records events, traces, and audit evidence across all layers</text>
+  <!-- === VISIBILITY LAYER === -->
+  <g id="layer-visibility">
+    <rect x="80" y="1150" width="852" height="160" class="group-bg"/>
+    <text x="110" y="1190" class="section-label">05 — Operational Visibility</text>
+
+    <g id="node-007">
+      <rect x="110" y="1220" width="792" height="70" class="node-vis"/>
+      <text x="145" y="1263" class="node-vis-title">007 Operational Visibility Framework</text>
+    </g>
   </g>
 
-  <!-- === SOLID DEPENDENCY CONNECTIONS === -->
+  <!-- ================= LEGEND ================= -->
+  <g id="legend">
+    <rect x="80" y="1370" width="852" height="430" class="legend-box"/>
+    <text x="110" y="1420" class="legend-title">Dependency Legend</text>
 
-  <!-- 002 uses 001 -->
-  <path d="M 610,377 L 670,377 L 670,282 L 750,282" class="conn-solid" marker-end="url(#arrow)"/>
-  <rect x="655" y="266" width="60" height="30" class="lbl-bg"/>
-  <text x="685" y="287" text-anchor="middle" class="lbl-text">uses</text>
+    <!-- uses -->
+    <line x1="110" y1="1475" x2="200" y2="1475" class="conn-uses" marker-end="url(#arrowRed)"/>
+    <text x="230" y="1483" class="legend-text"><tspan font-weight="700" fill="#dc2626">Red solid arrow:</tspan> uses — one capability relies on another's output or contract</text>
 
-  <!-- 003 consumes 002 -->
-  <path d="M 1050,322 L 1160,322" class="conn-solid" marker-end="url(#arrow)"/>
-  <rect x="1085" y="306" width="100" height="30" class="lbl-bg"/>
-  <text x="1135" y="327" text-anchor="middle" class="lbl-text">consumes</text>
+    <!-- consumes -->
+    <line x1="110" y1="1535" x2="200" y2="1535" class="conn-consumes" marker-end="url(#arrowBlue)"/>
+    <text x="230" y="1543" class="legend-text"><tspan font-weight="700" fill="#2563eb">Blue solid arrow:</tspan> consumes — one capability actively reads and acts on another's output</text>
 
-  <!-- 004 uses 003 (upper path) -->
-  <path d="M 1050,282 L 1130,282 L 1130,227 L 1190,227" class="conn-solid" marker-end="url(#arrow)"/>
-  <rect x="1085" y="211" width="60" height="30" class="lbl-bg"/>
-  <text x="1115" y="232" text-anchor="middle" class="lbl-text">uses</text>
+    <!-- builds upon -->
+    <line x1="110" y1="1595" x2="200" y2="1595" class="conn-builds" marker-end="url(#arrowGreen)"/>
+    <text x="230" y="1603" class="legend-text"><tspan font-weight="700" fill="#16a34a">Green solid arrow:</tspan> builds upon — one capability extends or depends on the foundation of another</text>
 
-  <!-- 005 builds upon 004 -->
-  <path d="M 1690,285 L 1760,285 L 1760,377 L 1830,377" class="conn-solid" marker-end="url(#arrow)"/>
-  <rect x="1725" y="269" width="130" height="30" class="lbl-bg"/>
-  <text x="1790" y="290" text-anchor="middle" class="lbl-text">builds upon</text>
+    <!-- emits events to -->
+    <line x1="110" y1="1655" x2="200" y2="1655" class="conn-emits" marker-end="url(#arrowAmber)"/>
+    <text x="230" y="1663" class="legend-text"><tspan font-weight="700" fill="#d97706">Amber dashed arrow:</tspan> emits events to — observability telemetry flowing to the visibility layer</text>
 
-  <!-- 006 consumes 004 (upper path) -->
-  <path d="M 1690,227 L 1770,227 L 1770,305 L 1830,305" class="conn-solid" marker-end="url(#arrow)"/>
-  <rect x="1725" y="211" width="100" height="30" class="lbl-bg"/>
-  <text x="1775" y="232" text-anchor="middle" class="lbl-text">consumes</text>
-
-  <!-- 006 consumes 005 (lower path) -->
-  <path d="M 1690,377 L 1770,377 L 1770,340 L 1830,340" class="conn-solid" marker-end="url(#arrow)"/>
-  <rect x="1725" y="361" width="100" height="30" class="lbl-bg"/>
-  <text x="1775" y="382" text-anchor="middle" class="lbl-text">consumes</text>
-
-  <!-- === DASHED TELEMETRY LINES TO 007 === -->
-
-  <!-- 001 to 007 -->
-  <path d="M 360,320 C 360,500 500,640 900,705" class="conn-dash" marker-end="url(#dashArrow)"/>
-
-  <!-- 002 to 007 -->
-  <path d="M 610,377 C 610,520 700,640 900,705" class="conn-dash" marker-end="url(#dashArrow)"/>
-
-  <!-- 003 to 007 -->
-  <path d="M 900,365 L 900,540 C 900,620 900,640 900,705" class="conn-dash" marker-end="url(#dashArrow)"/>
-
-  <!-- 004 to 007 -->
-  <path d="M 1440,245 C 1440,440 1300,640 1200,705" class="conn-dash" marker-end="url(#dashArrow)"/>
-
-  <!-- 005 to 007 -->
-  <path d="M 1690,377 C 1690,500 1550,640 1500,705" class="conn-dash" marker-end="url(#dashArrow)"/>
-
-  <!-- 006 to 007 -->
-  <path d="M 2060,365 C 2060,520 1750,640 1500,705" class="conn-dash" marker-end="url(#dashArrow)"/>
-
-  <!-- Telemetry label -->
-  <rect x="1250" y="540" width="160" height="32" class="lbl-bg"/>
-  <text x="1330" y="562" text-anchor="middle" class="lbl-text">emits events to</text>
+    <text x="110" y="1740" class="legend-text" font-style="italic">Color rationale: red signals direct reliance, blue signals active consumption, green signals extension/growth, amber signals watchful telemetry.</text>
+  </g>
 
 </svg>
