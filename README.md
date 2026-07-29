@@ -42,63 +42,52 @@ The repository is organized to guide readers from architectural methodology thro
 
 The recommended reading order follows the structure below.
 
-text
-```
-ArchitecturAlchemized/
-│
-├── 📄 01 - Specification-First Architecture Methodology.md
-│      └── How I approach system architecture.
-│
-├── 📄 02 - Reference Architecture Overview.md
-│      └── The architectural model produced from that methodology.
-│
-├── 🖼️ 03 - Reference Architecture Dependency Map.svg
-│      └── Visual representation of capability relationships.
-│
-├── 📁 04 - Reference Architecture/
-│      │
-│      ├── 📁 Layer 1 — Architectural Narrative/
-│      │      │
-│      │      ├── 01 - Business Configuration Narrative.md
-│      │      ├── 02 - Configuration Management Narrative.md
-│      │      ├── 03 - Business Decision Narrative.md
-│      │      ├── 04 - Customer Request Lifecycle Narrative.md
-│      │      ├── 05 - Emergency Client Contact Narrative.md
-│      │      ├── 06 - Client Notification Narrative.md
-│      │      └── 07 - Operational Visibility Narrative.md
-│      │
-│      ├── 📁 Layer 2 — Architectural Specifications/
-│      │      │
-│      │      ├── 01 - Business Configuration Framework.md
-│      │      ├── 02 - Configuration Management Layer.md
-│      │      ├── 03 - Business Decision Framework.md
-│      │      ├── 04 - Customer Request Lifecycle Model.md
-│      │      ├── 05 - Emergency Client Contact Workflow.md
-│      │      ├── 06 - Client Notification Framework.md
-│      │      └── 07 - Operational Visibility Framework.md
-│      │
-│      └── 📁 Layer 3 — Architectural Blueprints/
-│             │
-│             ├── 01 - Business Configuration Blueprint.md
-│             ├── 02 - Configuration Management Blueprint.md
-│             ├── 03 - Business Decision Blueprint.md
-│             ├── 04 - Customer Request Blueprint.md
-│             ├── 05 - Emergency Client Contact Blueprint.md
-│             ├── 06 - Client Notification Blueprint.md
-│             └── 07 - Operational Visibility Blueprint.md
-│
-└── 📁 05 - Reference Implementation/
-       │
-       └── 📁 Layer 4 — Source Code Implementation/
-              │
-              ├── 01 - Business Configuration/
-              ├── 02 - Configuration Management/
-              ├── 03 - Business Decision/
-              ├── 04 - Customer Request Lifecycle/
-              ├── 05 - Emergency Client Contact/
-              ├── 06 - Client Notification/
-              └── 07 - Operational Visibility/
-```
+- [01 - Specification-First Architecture Methodology.md](./01%20-%20Specification-First%20Architecture%20Methodology.md)  
+  _How I approach system architecture._
+
+- [02 - Reference Architecture Overview.md](./02%20-%20Reference%20Architecture%20Overview.md)  
+  _The architectural model produced from that methodology._
+
+- [03 - Reference Architecture Dependency Map.svg](./03%20-%20Reference%20Architecture%20Dependency%20Map.svg)  
+  _Visual representation of capability relationships._
+
+- [04 - Reference Architecture/](./04%20-%20Reference%20Architecture/)
+  - [Layer 1 — Architectural Narrative/](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/)
+    - [01 - Business Configuration Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/01%20-%20Business%20Configuration%20Narrative.md)
+    - [02 - Configuration Management Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/02%20-%20Configuration%20Management%20Narrative.md)
+    - [03 - Business Decision Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/03%20-%20Business%20Decision%20Narrative.md)
+    - [04 - Customer Request Lifecycle Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/04%20-%20Customer%20Request%20Lifecycle%20Narrative.md)
+    - [05 - Emergency Client Contact Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/05%20-%20Emergency%20Client%20Contact%20Narrative.md)
+    - [06 - Client Notification Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/06%20-%20Client%20Notification%20Narrative.md)
+    - [07 - Operational Visibility Narrative.md](./04%20-%20Reference%20Architecture/Layer%201%20%E2%80%94%20Architectural%20Narrative/07%20-%20Operational%20Visibility%20Narrative.md)
+
+  - [Layer 2 — Architectural Specifications/](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/)
+    - [01 - Business Configuration Framework.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/01%20-%20Business%20Configuration%20Framework.md)
+    - [02 - Configuration Management Layer.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/02%20-%20Configuration%20Management%20Layer.md)
+    - [03 - Business Decision Framework.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/03%20-%20Business%20Decision%20Framework.md)
+    - [04 - Customer Request Lifecycle Model.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/04%20-%20Customer%20Request%20Lifecycle%20Model.md)
+    - [05 - Emergency Client Contact Workflow.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/05%20-%20Emergency%20Client%20Contact%20Workflow.md)
+    - [06 - Client Notification Framework.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/06%20-%20Client%20Notification%20Framework.md)
+    - [07 - Operational Visibility Framework.md](./04%20-%20Reference%20Architecture/Layer%202%20%E2%80%94%20Architectural%20Specifications/07%20-%20Operational%20Visibility%20Framework.md)
+
+  - [Layer 3 — Architectural Blueprints/](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/)
+    - [01 - Business Configuration Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/01%20-%20Business%20Configuration%20Blueprint.md)
+    - [02 - Configuration Management Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/02%20-%20Configuration%20Management%20Blueprint.md)
+    - [03 - Business Decision Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/03%20-%20Business%20Decision%20Blueprint.md)
+    - [04 - Customer Request Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/04%20-%20Customer%20Request%20Blueprint.md)
+    - [05 - Emergency Client Contact Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/05%20-%20Emergency%20Client%20Contact%20Blueprint.md)
+    - [06 - Client Notification Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/06%20-%20Client%20Notification%20Blueprint.md)
+    - [07 - Operational Visibility Blueprint.md](./04%20-%20Reference%20Architecture/Layer%203%20%E2%80%94%20Architectural%20Blueprints/07%20-%20Operational%20Visibility%20Blueprint.md)
+
+- [05 - Reference Implementation/](./05%20-%20Reference%20Implementation/)
+  - [Layer 4 — Source Code Implementation/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/)
+    - [01 - Business Configuration/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/01%20-%20Business%20Configuration/)
+    - [02 - Configuration Management/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/02%20-%20Configuration%20Management/)
+    - [03 - Business Decision/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/03%20-%20Business%20Decision/)
+    - [04 - Customer Request Lifecycle/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/04%20-%20Customer%20Request%20Lifecycle/)
+    - [05 - Emergency Client Contact/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/05%20-%20Emergency%20Client%20Contact/)
+    - [06 - Client Notification/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/06%20-%20Client%20Notification/)
+    - [07 - Operational Visibility/](./05%20-%20Reference%20Implementation/Layer%204%20%E2%80%94%20Source%20Code%20Implementation/07%20-%20Operational%20Visibility/)
 
 Each layer builds upon the previous one:
 
