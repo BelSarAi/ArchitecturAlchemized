@@ -1,9 +1,3 @@
-Updated todo list
-
-Here is the **006 Client Notification Framework — Implementation Architectural Blueprint**.
-
----
-
 # 006 Client Notification Framework — Implementation Architectural Blueprint
 
 ## 1. Construction Overview
