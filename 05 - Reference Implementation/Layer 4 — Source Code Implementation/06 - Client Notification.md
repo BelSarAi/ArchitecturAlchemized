@@ -1,5 +1,3 @@
-Updated todo list
-
 # 006 Client Notification Framework — Layer 4 Implementation
 
 > **Scope:** Pure-logic notification event compiler. Implements NotificationEventBuilder.PRD. Uses ClientAlertRouting.PRD only as the source of the `RoutingDecision` input contract. No sending, rendering, routing, persistence, or workflow decisions.
