@@ -1,9 +1,3 @@
-Updated todo list
-
-Here is the fully rewritten `004_Customer_Intake_Request_Model.md`, refined against the checklist and your feedback.
-
----
-
 # Customer Intake Request Model
 
 **Reference Architecture Specification**
