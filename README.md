@@ -137,7 +137,10 @@ The focus is not on a single application or technology stack. It is on creating 
 
 The documents and implementation contained here demonstrate one application of that approach.
 
----
+The architecture provides the blueprint.
+
+The implementation demonstrates the possibility.
+Ultimately, this repository is about demonstrating a disciplined approach to building intelligent operational systems—one where architecture guides implementation rather than being an afterthought.
 
 ---
 
@@ -154,8 +157,3 @@ and source code are original works of the author.
 Except as permitted by applicable law, no portion of this repository may be
 reproduced, redistributed, modified, or presented as original work without
 prior written permission from the copyright holder.
-
-The architecture provides the blueprint.
-
-The implementation demonstrates the possibility.
-Ultimately, this repository is about demonstrating a disciplined approach to building intelligent operational systems—one where architecture guides implementation rather than being an afterthought.
