@@ -1,5 +1,3 @@
-Updated todo list
-
 # 003 Business Decision Framework — Implementation
 
 **Assumption note:** `ServiceCatalog.PRD` was not supplied with this task. The `ServiceCatalogItem` shape below is derived strictly from the fields referenced in `ServiceCapabilityDecision.PRD` (`systemId`, `displayName`, `tags`, `triageQuestions`). If the owning PRD introduces additional fields, the matcher and compilers should be extended additively.
