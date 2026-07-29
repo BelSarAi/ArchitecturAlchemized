@@ -137,6 +137,24 @@ The focus is not on a single application or technology stack. It is on creating 
 
 The documents and implementation contained here demonstrate one application of that approach.
 
+---
+
+---
+
+## Copyright & Usage
+
+Copyright © 2026 Mabel Asare.
+
+All rights reserved.
+
+This repository is published for professional portfolio, educational, and
+evaluation purposes. The architectural methodology, documentation, diagrams,
+and source code are original works of the author.
+
+Except as permitted by applicable law, no portion of this repository may be
+reproduced, redistributed, modified, or presented as original work without
+prior written permission from the copyright holder.
+
 The architecture provides the blueprint.
 
 The implementation demonstrates the possibility.
