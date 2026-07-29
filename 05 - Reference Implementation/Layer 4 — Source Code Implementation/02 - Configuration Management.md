@@ -1,5 +1,3 @@
-Updated todo list
-
 # 002 Configuration Management Layer — Implementation
 
 **Assumption note:** `ClientProfile.PRD` and `LocationProfile.PRD` were not supplied with this task. The canonical shapes below are derived strictly from the fixtures and validation rules in `ConfigurationLoader.PRD`. If the owning PRDs introduce additional fields, the validators and compilers should be extended additively.
